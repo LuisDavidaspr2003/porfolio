@@ -1,0 +1,183 @@
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+
+*{
+    padding: 0;
+    margin: 0;
+
+}
+/* variables de csss se hacen con el :root*/
+:root{
+    --color-primario:#000 ;
+    --color-segundiario:#F6F6F6;
+    --color-terciario:#22D4FD;
+    --color-hover: #272727;
+    --fuente-montserrate:  "Montserrat", sans-serif;
+    --fuente-krona: "Krona One", sans serif;
+
+
+
+
+
+}
+
+
+body{
+    background-color:var(--color-primario);
+    color:var(--color-segundiario);
+    height: 100vh;
+    box-sizing: border-box;
+}
+h1{
+    color: var(--color-segundiario);
+}
+strong{
+    color:var(--color-terciario)
+}
+
+.header{
+    padding: 2% 0% 0% 10%;
+    
+}
+
+
+.header__menu{
+  display: flex;
+  gap: 80px;
+  transition: transform 0.3s
+}
+
+.header__menu__links{
+    font-family: var( --fuente-montserrate);
+    font-size: 1.5rem; /* rem 1=16px          0.5 rem=8px se utiliza para hacer esto reposive */
+    font-weight: 600;
+    color:var(--color-terciario);
+    text-decoration: none;
+    
+}
+
+
+
+
+
+
+
+
+
+
+.presentacion{
+    display: flex;
+    align-items: center;
+    padding: 2% 10%;
+    justify-content: space-between;
+    gap:80px;
+
+}
+.presentacion___contenido{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+.presentacion___contenido__titulo{
+    font-size: 2.25rem; /* rem 1=16px          0.5 rem=8px se utiliza para hacer esto reposive */
+    font-family: var(--fuente-krona);
+
+}
+
+.presentacion___contenido__parrafo{
+    font: size 1.5rem; /* rem 1=16px          0.5 rem=8px se utiliza para hacer esto reposive */
+    font-family: var( --fuente-montserrate);
+
+}
+
+.presentacion___enlaces{
+    display: flex;
+    justify-content: space-between;
+    flex-direction:column;
+    align-items: center;
+    gap: 32px;
+}
+.presentacion___enlaces__links{
+    width: 50%;
+    text-align: center;
+    padding: 24.5px 0;
+    border-radius: 8px;
+    font-family: var( --fuente-montserrate);
+    font-size: 1.5rem; /* rem 1=16px          0.5 rem=8px se utiliza para hacer esto reposive */
+    font-weight: 600;
+    text-decoration: none;
+    color: var(--color-segundiario);
+    border: 2px solid var(--color-terciario);
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    transition: transform 0.3s, background-color 0.3s
+
+
+}
+
+.presentacion___enlaces___subtitulo{
+    font-size: 1.5rem; /* rem 1=16px          0.5 rem=8px se utiliza para hacer esto reposive */
+    font-family: var(--fuente-krona);
+    font-weight: 400;
+
+}
+.presentacion___enlaces__links:hover{
+    background-color: var(--color-hover);
+    transform: translateY(3px);
+   
+
+}
+.footer{
+    background-color: var(--color-terciario);
+    display: flex;
+    justify-content: center;
+    padding: 24px;
+    color: var(--color-primario);
+    font-family: var( --fuente-montserrate);
+    font-size: 1.5rem; /* rem 1=16px          0.5 rem=8px se utiliza para hacer esto reposive */
+    transition: transform 0.3s, background-color 0.3s
+
+
+}
+ 
+.presentacion_imagen{
+width: 50%;
+transition: transform 0.3s
+
+}
+
+.footer:hover,
+.header__menu__links:hover,
+.presentacion_imagen:hover {
+    transform: translateY(3px);
+}
+/* Comportamiento de proyecto con media query para modo mobile reposive */
+@media(max-width: 1200px){
+
+
+    .header{
+        padding: 10px;
+        padding-top: 30px;
+    }
+
+    .header__menu{
+        justify-content: center;
+    }
+
+    .presentacion{
+        flex-direction: column-reverse;
+        padding: 5%;
+    }
+
+    .presentacion___contenido{
+        width: auto;
+    }
+
+    
+
+
+
+}
